@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: quiz-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: "python backend.py"
+    envVars:
+      - key: ORACLE_USER
+        value: SEU_USUARIO
+      - key: ORACLE_PASSWORD
+        value: SUA_SENHA
+      - key: ORACLE_DSN
+        value: seu_dsn_oracle_aqui

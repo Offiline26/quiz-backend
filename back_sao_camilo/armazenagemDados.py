@@ -4,11 +4,14 @@ import oracledb
 app = Flask(__name__)
 
 # Configurar conexão (ajuste user, password, host e service_name conforme seu ambiente)
+import os
+dsn = os.getenv("oracle.fiap.com.br:1521/ORCL")
 conn = oracledb.connect(
-    user="RM555352",
-    password="260606",
-    dsn="oracle.fiap.com.br:1521/ORCL"  # Exemplo para Oracle XE com service_name
+    user=os.getenv("RM555352"),
+    password=os.getenv("260606"),
+    dsn=dsn
 )
+
 
 @app.route('/quiz', methods=['POST'])
 def salvar_resposta():
