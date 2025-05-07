@@ -5,11 +5,10 @@ app = Flask(__name__)
 
 # Configurar conexão (ajuste user, password, host e service_name conforme seu ambiente)
 import os
-dsn = os.getenv("oracle.fiap.com.br:1521/ORCL")
 conn = oracledb.connect(
-    user=os.getenv("RM555352"),
-    password=os.getenv("260606"),
-    dsn=dsn
+    user=os.environ["ORACLE_USER"],
+    password=os.environ["ORACLE_PASSWORD"],
+    dsn=os.environ["ORACLE_DSN"]
 )
 
 
