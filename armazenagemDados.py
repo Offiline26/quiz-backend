@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import oracledb
 
 app = Flask(__name__)
 CORS(app)
+
 # Configurar conexão (ajuste user, password, host e service_name conforme seu ambiente)
 import os
 conn = oracledb.connect(
