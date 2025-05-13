@@ -3,7 +3,7 @@ services:
     name: quiz-backend
     runtime: python
     buildCommand: ""
-    startCommand: "python backend.py"
+    startCommand: "python armazenagemDados.py"
     envVars:
       - key: ORACLE_USER
         value: SEU_USUARIO
