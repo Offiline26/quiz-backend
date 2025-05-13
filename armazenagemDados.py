@@ -3,6 +3,8 @@ from flask_cors import CORS
 import oracledb
 import os
 
+oracledb.init_oracle_client(lib_dir=None)
+
 app = Flask(__name__)
 CORS(app)
 
